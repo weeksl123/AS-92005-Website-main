@@ -1,0 +1,177 @@
+/*****************Sets custom fonts*****************/
+
+@font-face {
+    font-family: Alegreya_SC;
+    src: url(Alegreya_SC.ttf);
+}
+
+@font-face {
+    font-family: Alex_Brush;
+    src: url(Alex_Brush.ttf)
+}
+
+/*****************Styles header elements*****************/
+
+#header_h1 {
+    text-align: left;
+    color: #62067c;
+    font-family: 'Alegreya_SC', Garamond, 'Palatino Linotype';
+}
+
+#header_h2 {
+    text-align: left;
+    color: #62067c;
+    font-family: 'Alegreya_SC', Garamond, 'Palatino Linotype';
+}
+
+#header_h3 {
+    text-align: left;
+    color: #62067c;
+    font-family: 'Alex_Brush';
+}
+
+header {
+    background-color:#b0896c;
+}
+
+#header_text {
+    font-size: 20px;
+    width: 100%;
+}
+
+#header_logo {
+    width: 100%;
+    max-height: 300px;
+    max-width: 300px;
+    min-width: 100px;
+}
+
+.column {
+    flex: 50%;
+    padding: 5px;
+}
+
+#header_container {
+    display: flex;
+}
+
+/*****************Styles Nav*****************/
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  border: #333 solid 5px;
+  border-radius: 2px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #997050;
+  color: white;
+}
+
+/*****************Styles survey elements*****************/
+
+#survey {
+    background-color: white;
+}
+
+.survey_entry {
+    border: #000 solid 2px;
+    border-radius: 5%;
+}
+
+.survey_label {
+    color:#000;
+}
+
+input[type="text"], input[type="email"] {
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/*Styles footer text*/
+
+.footer_txt {
+    color: grey;
+}
+
+/*****************Styles reviews elements*****************/
+
+.reviews {
+  width: 991px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.reviews_navdots {
+  bottom: 0;
+  position: absolute;
+}
+
+.reviews_imgs.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+.reviews_navdots button {
+  /*reset button style to defualt*/ 
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  /*style as a grey dot*/
+  background-color: #9a9a9a;
+  border-radius: 50%;
+  height: 10px;
+  padding: 0;
+  width: 10px;
+}
+
+.reviews_navdots button:focus-visible {
+  outline: 2px solid #0060a8;
+  outline-offset: 2px;
+}
+
+.reviews_navdots button.is-active {
+  background-color: #0060a8;
+}
+
+.reviews_imgs,
+.reviews_img {
+  width: 100%;
+}
+
+.reviews_imgs {
+  display: flex;
+  column-gap: 20px;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+/*****************Disables scroll bar*****************/
+
+.reviews_imgs::-webkit-scrollbar {
+  display: none;
+}
+
+.reviews_img {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
