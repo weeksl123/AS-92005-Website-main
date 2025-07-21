@@ -62,6 +62,8 @@ header {
 	background-color: #333;
 	border: #333 solid 5px;
 	border-radius: 2px;
+	position: sticky;
+	top: 0;
 }
 
 .topnav a {
