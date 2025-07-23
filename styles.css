@@ -85,6 +85,36 @@ header {
 	color: white;
 }
 
+/*************Styles main content*****************/
+main h1, h2, h3 {
+	text-align: center;
+	color: #62067c;
+	font-family: 'alegreya_SC', Garamond, 'Palatino Linotype';
+}
+
+#menu div {
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+}
+
+#chk_menu {
+	margin-left: 20px;
+	padding-top: 50px, 0px;
+	font-weight: 500;
+	text-align: left;
+}
+
+#menu_b {
+	background-color: #62067c;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
 /*Styles footer text*/
 
 .footer_txt {
