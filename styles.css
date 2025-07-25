@@ -115,6 +115,24 @@ main h1, h2, h3 {
 	cursor: pointer;
 	border-radius: 5px;
 }
+/*****************Styles menu*****************/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 /*Styles footer text*/
 
