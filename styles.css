@@ -116,22 +116,40 @@ main h1, h2, h3 {
 	border-radius: 5px;
 }
 /*****************Styles menu*****************/
-.row {
+.menu_row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px;
 }
 
-.column {
+.menu_column {
   flex: 50%;
   padding: 10px;
   box-sizing: border-box;
 }
 
-.column img {
-  width: 100%;
+.menu_column img {
+  width: 666px;
   height: auto;
   display: block;
+  border: #000 solid 4px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}	
+
+.column_txt h1 {
+  text-align: center;
+  font-family: 'Alegreya_SC', Garamond, 'Palatino Linotype';
+  color: #62067c;
+  font-size: 30px;
+}
+
+.column_txt h {
+  text-align: center;
+  font-family: 'Alegreya_SC', Garamond, 'Palatino Linotype';
+  color: #62067c;
+  font-size: 25px;
 }
 
 /*Styles footer text*/
