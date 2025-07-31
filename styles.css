@@ -18,16 +18,11 @@
 	font-family: 'Alegreya_SC', Garamond, 'Palatino Linotype';
 }
 
-#header_h2 {
-	text-align: left;
-	color: #62067c;
-	font-family: 'Alegreya_SC', Garamond, 'Palatino Linotype';
-}
-
 #header_h3 {
 	text-align: left;
 	color: #62067c;
 	font-family: 'Alex_Brush';
+	font-size: 40px;
 }
 
 header {
@@ -155,5 +150,5 @@ main h1, h2, h3 {
 /*Styles footer text*/
 
 .footer_txt {
-	color: grey;
+	color: #222;
 }
