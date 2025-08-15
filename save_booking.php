@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('Pacific/Auckland');
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -38,7 +40,7 @@ if (!file_exists($file)) {
 	file_put_contents($file, str_repeat("-", 80) . "\n", FILE_APPEND);
 }
 
-$line = str_pad(date('Y-m-d H:i'), 20) . 
+$line = str_pad(date('d-m-Y H:i'), 20) . 
 		str_pad($name, 25) . 
 		str_pad($email, 35) . 
 		str_pad($date, 12) .
