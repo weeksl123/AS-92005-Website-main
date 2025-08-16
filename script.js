@@ -17,8 +17,8 @@ document.getElementById("booking_form").addEventListener("submit", async functio
 
        const result = await response.json();
        alert(result.message || "Booked successfully!");
-   } catch (err) {
-       console.error("Error during booking:", err);
+   } catch (error) {
+       console.error("Error during booking:", error);
        alert("An error occurred while processing your booking. Please try again.");
    }
 });

@@ -19,7 +19,7 @@ $email = $_POST['email'] ?? '';
 $date = $_POST['date'] ?? '';
 $time = $_POST['time'] ?? '';
 $guests = $_POST['guests'] ?? '';
-$requests = $_POST['requests'] ?? '';
+$requests = $_POST['special_requests'] ?? '';
 
 if (empty($name) || empty($email) || empty($date) || empty($time) || empty($guests)) {
 	echo json_encode(['status' => 'error', 'message' => 'All fields are required.']);
@@ -37,10 +37,13 @@ if (!file_exists($file)) {
 				str_pad("Guests", 8) . 
 				"Special Requests\n";
 	file_put_contents($file, $heading);
-	file_put_contents($file, str_repeat("-", 80) . "\n", FILE_APPEND);
+	file_put_contents($file, str_repeat("-", 130) . "\n", FILE_APPEND);
 }
 
-$line = str_pad(date('d-m-Y H:i'), 20) . 
+// Format the date to dd-mm-yyyy
+$date = date('d-m-Y', strtotime($date));
+
+$line = str_pad(date('d-m-y H:i'), 20) . 
 		str_pad($name, 25) . 
 		str_pad($email, 35) . 
 		str_pad($date, 12) .
@@ -107,5 +110,10 @@ try {
 	echo json_encode([
 		'status' => 'error', 
 		'message' => $e->getMessage()
+	]);
+} catch (Throwable $e) {
+	echo json_encode([
+		'status' => 'error',
+		'message' => 'An unexpected error occurred'
 	]);
 }
