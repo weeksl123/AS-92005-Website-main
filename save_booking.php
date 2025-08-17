@@ -26,7 +26,9 @@ if (empty($name) || empty($email) || empty($date) || empty($time) || empty($gues
 	exit;
 }
 
-//Save the booking to a file
+// mail("codingpain064@gmail.com", "New Booking Request", "$name has made a booking request.\n\n", "FROM: $email\n\n");
+
+// Save the booking to a file
 $file = 'bookings.txt';
 if (!file_exists($file)) {
 	$heading =  str_pad("Date/Time Booked", 20) . 
@@ -93,8 +95,8 @@ try {
 
 	// Content
 	$mail->isHTML(false); // Set email format to plain text
-	$mail->subject = "Thank you for your booking!";
-	$mail->body	  = "Hello $name,\n\n" .
+	$mail->Subject = "Thank you for your booking!";
+	$mail->Body = "Hello $name,\n\n" .
 					"Thank you for booking with us! Here are your booking details:\n" .
 					"Date: $date\n" .
 					"Time: $time\n" .
@@ -107,13 +109,14 @@ try {
 	$mail->send();
 	echo json_encode(['status' => 'success', 'message' => 'Booking saved and confirmation email sent.']);
 } catch (Exception $e) {
-	echo json_encode([
-		'status' => 'error', 
-		'message' => $e->getMessage()
-	]);
+	echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+	// echo json_encode([
+	// 	'status' => 'error', 
+	// 	'message' => $e->getMessage()
+	// ]);
 } catch (Throwable $e) {
-	echo json_encode([
+		echo json_encode([
 		'status' => 'error',
-		'message' => 'An unexpected error occurred'
+		'message' => $e->getMessage()
 	]);
 }
