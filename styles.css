@@ -41,11 +41,6 @@ header {
 	min-width: 100px;
 }
 
-.column {
-	flex: 50%;
-	padding: 5px;
-}
-
 #header_container {
 	display: flex;
 }
@@ -92,10 +87,23 @@ header {
 }
 
 /*************Styles main content*****************/
+html, body {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: #f1f1f0;
+	height: 100%;
+	width: 100%;
+}
+
 main h1, h2, h3 {
 	text-align: center;
 	color: #62067c;
 	font-family: 'alegreya_SC', Garamond, 'Palatino Linotype';
+}
+
+::-webkit-scrollbar {
+	display:none;
 }
 
 /*****************Styles menu*****************/
@@ -141,10 +149,97 @@ main h1, h2, h3 {
 	font-family: 'Alegreya_SC', Garamond, 'Palatino Linotype';
 }
 
+/****************Styles booking page*****************/
+#booking_form {
+	color: #62067c;
+	font-family: 'Alegreya_SC', Garamond, 'Palatino Linotype';
+}
+
+.booking_row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 0 -16px;
+}
+
+.booking_columm-75 {
+	-ms-flex: 75%;
+	flex: 75%;
+}
+
+.booking_column-50 {
+	-ms-flex: 50%;
+	flex: 50%;
+}
+
+.booking_column-50, .booking_column-75 {
+	padding: 0 16px;
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="time"], input[type="number"], textarea {
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+/****************Styles policy page*****************/
+#policys {
+	font-family: 'Alegreya_SC', Garamond, 'Palatino Linotype';
+	color: #62067c;
+	background: #f1f1f0;
+}
+
+.dropdown {
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	max-width: 600px;
+	margin:auto;
+}
+
+.dropdown-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	padding:15px 0;
+}
+
+.dropdown-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s ease;
+	line-height: 1.6;
+}
+
+.toggle-btn {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown.active .dropdown-content {
+	max-height: 500px;
+	margin-top: 10px;
+}
+
 /*Styles footer text*/
+footer {
+	background-color: #997050;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.footer-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
 
 .footer_txt {
-	color: #62067c;
+	color: #f1f1f0;
 	font-family: alex_brush, Garamond, 'Palatino Linotype';
 	font-size: 20px;
 }
