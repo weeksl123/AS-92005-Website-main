@@ -13,3 +13,4 @@ document.querySelectorAll(".dropdown").forEach(dropdown => {
         toggleBtn.textContent = dropdown.classList.contains("active") ? "x" : "+";
     });
 });
+
