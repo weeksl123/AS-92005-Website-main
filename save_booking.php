@@ -1,16 +1,6 @@
 <?php
 date_default_timezone_set('Pacific/Auckland');
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-require 'PHPMailer/src/Exception.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
 header('content-type: application/json');
 
 //Collect data from the form
@@ -25,8 +15,6 @@ if (empty($name) || empty($email) || empty($date) || empty($time) || empty($gues
 	echo json_encode(['status' => 'error', 'message' => 'All fields are required.']);
 	exit;
 }
-
-// mail("codingpain064@gmail.com", "New Booking Request", "$name has made a booking request.\n\n", "FROM: $email\n\n");
 
 // Save the booking to a file
 $file = 'bookings.txt';
@@ -76,47 +64,3 @@ function loadEnv($path)
 }
 // Load environment variables
 loadEnv(__DIR__ . '/.env');
-
-// Send a confirmation email
-$mail = new PHPMailer(true);
-
-try {
-	$mail->isSMTP();
-	$mail->Host = $_ENV['SMTP_HOST']; // Set the SMTP server to send through
-	$mail->SMTPAuth = true;
-	$mail->Username = $_ENV['SMTP_USERNAME']; // SMTP username
-	$mail->Password = $_ENV['SMTP_PASSWORD']; // SMTP password
-	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-	$mail->Port = $_ENV['SMTP_PORT']; // TCP port to connect to
-
-	// From and To
-	$mail->setFrom('no-reply@chewieskitchen.com', "Chewbacca's Kitchen");
-	$mail->addAddress($email, $name); // Add a recipient
-
-	// Content
-	$mail->isHTML(false); // Set email format to plain text
-	$mail->Subject = "Thank you for your booking!";
-	$mail->Body = "Hello $name,\n\n" .
-					"Thank you for booking with us! Here are your booking details:\n" .
-					"Date: $date\n" .
-					"Time: $time\n" .
-					"Guests: $guests\n" .
-					"Special Requests: $requests\n\n" .
-					"We look forward to seeing you!\n\n" .
-					"- Chewbacca's Kitchen";
-
-
-	$mail->send();
-	echo json_encode(['status' => 'success', 'message' => 'Booking saved and confirmation email sent.']);
-} catch (Exception $e) {
-	echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-	// echo json_encode([
-	// 	'status' => 'error', 
-	// 	'message' => $e->getMessage()
-	// ]);
-} catch (Throwable $e) {
-		echo json_encode([
-		'status' => 'error',
-		'message' => $e->getMessage()
-	]);
-}
