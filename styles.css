@@ -94,6 +94,17 @@ html, body {
 	background: #f1f1f0;
 	height: 100%;
 	width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
 }
 
 main h1, h2, h3 {
@@ -153,6 +164,7 @@ main h1, h2, h3 {
 #booking_form {
 	color: #62067c;
 	font-family: 'Alegreya_SC', Garamond, 'Palatino Linotype';
+	margin-left: 10px;
 }
 
 .booking_row {
@@ -160,21 +172,6 @@ main h1, h2, h3 {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	margin: 0 -16px;
-}
-
-.booking_columm-75 {
-	-ms-flex: 75%;
-	flex: 75%;
-}
-
-.booking_column-50 {
-	-ms-flex: 50%;
-	flex: 50%;
-}
-
-.booking_column-50, .booking_column-75 {
-	padding: 0 16px;
 }
 
 input[type="text"], input[type="email"], input[type="date"], input[type="time"], input[type="number"], textarea {
@@ -183,6 +180,15 @@ input[type="text"], input[type="email"], input[type="date"], input[type="time"],
 	padding: 12px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+}
+
+input[type="submit"] {
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: white;
 }
 
 /****************Styles policy page*****************/
@@ -230,12 +236,22 @@ footer {
 	background-color: #997050;
 	margin-bottom: 0;
 	padding-bottom: 0;
+	display:flex;
 }
+
 .footer-column {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100px;
+	text-align: center;
+}
+
+.footer-link {
+	color: #f1f1f0;
+	text-decoration: none;
+	font-family: alex_brush, Garamond, 'Palatino Linotype';
+	font-size: 20px;
+}
+
+#footer-main {
+	flex: 1;
 }
 
 .footer_txt {
