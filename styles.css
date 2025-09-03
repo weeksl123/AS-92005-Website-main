@@ -117,6 +117,14 @@ main h1, h2, h3 {
 	display:none;
 }
 
+#location iframe {
+	display: block;
+	margin: auto;
+	border: #000 solid 4px;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 /*****************Styles menu*****************/
 .menu_row {
   display: flex;
@@ -248,6 +256,7 @@ footer {
 	text-decoration: none;
 	font-family: alex_brush, Garamond, 'Palatino Linotype';
 	font-size: 20px;
+	margin-left: 5px;
 }
 
 #footer-main {
