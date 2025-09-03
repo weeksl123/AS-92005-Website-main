@@ -1,4 +1,6 @@
-Savory
+# Menu
+
+## Savory
 
 Darth vade balls
 A pack of 6 deep-fried balls with cheese inside,
@@ -21,7 +23,7 @@ Al dente pasta served with smaller chunks of New Zealand lamb, this is cooked in
 Bantha Burgers
 Mammoth meat cooked to either medium, blue, or rare, this is served with a melty fine aged cheddar, surrounded by homegrown tomatoes, iceberg lettuce, and our homemade spicy mayo. All of this is placed inside freshly made brioche buns.
 
-Dessert
+## Dessert
 
 Wookiee Waffles
 Buttermilk gram cracker waffles. This is served with a sprinkling of graham crackers and some bananas cut up into smaller pieces, drizzled with caramelized honey over the top.
@@ -29,11 +31,13 @@ Buttermilk gram cracker waffles. This is served with a sprinkling of graham crac
 Only one cannoli
 A deep, larger piece of pasta deep fried, stuffed with fresh cream and fruit, rolled in chunks of chocolate
 
-Drinks
+## Drinks
 
-Shot oh sister lovin'
+### Shot oh sister lovin'
+
 A strong mix of tequila and ginger beer, served with a rim of cinnamon and sugar, 
 This refers to the original trilogy, where Luke spends the first two movies trying to make moves on his sister.
 
-Hoth Hot Chocolate
+### Hoth Hot Chocolate
+
 Near-expired instant hot chocolate packet with too much water, no milk and crusty old marshmallows to top. 

@@ -1,1 +1,3 @@
-bookings.txt
+# Ignore environment files and data files
+.env
+data/bookings.txt
